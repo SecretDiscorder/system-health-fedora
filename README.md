@@ -1,8 +1,10 @@
 # system-health-fedora
 Simple Bash Script for Monitoring Fedora Health
 
-
+```
 chmod +rwx check.sh
+```
+
 ```
 sudo ./check.sh
 ```
