@@ -1,0 +1,230 @@
+Script started on 2025-06-29 16:56:36+07:00 [COMMAND="./Programming/check.sh" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="110" LINES="19"]
+[H[2J[3J************************************
+        System Health Status
+************************************
+Hostname : localhost
+Operating System : "Fedora Linux 42 (KDE Plasma Mobile)"
+Kernel Version : 6.15.4-200.fc42.x86_64
+OS Architecture : 64 Bit OS
+System Uptime : up 23 minutes
+Current System Date & Time : Min 29 Jun 2025 16:56:36
+[1m[34m             .',;::::;,'.
+         .';:cccccccccccc:;,.
+      .;cccccccccccccccccccccc;.
+    .:cccccccccccccccccccccccccc:.
+  .;ccccccccccccc;[37m.:dddl:.[34m;ccccccc;.
+ .:ccccccccccccc;[37mOWMKOOXMWd[34m;ccccccc:.
+.:ccccccccccccc;[37mKMMc[34m;cc;[37mxMMc[34m;ccccccc:.
+,cccccccccccccc;[37mMMM.[34m;cc;[37m;WW:[34m;cccccccc,
+:cccccccccccccc;[37mMMM.[34m;cccccccccccccccc:
+:ccccccc;[37moxOOOo[34m;[37mMMM000k.[34m;cccccccccccc:
+cccccc;[37m0MMKxdd:[34m;[37mMMMkddc.[34m;cccccccccccc;
+ccccc;[37mXMO'[34m;cccc;[37mMMM.[34m;cccccccccccccccc'
+ccccc;[37mMMo[34m;ccccc;[37mMMW.[34m;ccccccccccccccc;
+ccccc;[37m0MNc.[34mccc[37m.xMMd[34m;ccccccccccccccc;
+cccccc;[37mdNMWXXXWM0:[34m;cccccccccccccc:,
+cccccccc;[37m.:odl:.[34m;cccccccccccccc:,.
+ccccccccccccccccccccccccccccc:'.
+:ccccccccccccccccccccccc:;,..
+ ':cccccccccccccccc::;,.[m[1G[18A[m[?7l[42C[m[1m[34mroot[m@[1m[34mlocalhost[m
+[42C--------------
+[42C[m[1m[34mOS[m: [mFedora Linux 42 (KDE Plasma Mobile) x86_64
+[42C[m[1m[34mHost[m: [m2349N7G (ThinkPad T430)
+[42C[m[1m[34mKernel[m: [mLinux 6.15.4-200.fc42.x86_64
+[42C[m[1m[34mUptime[m: [m23 mins
+[42C[m[1m[34mPackages[m: [m3574 (rpm), 51 (flatpak), 16 (snap)
+[42C[m[1m[34mShell[m: [mbash 5.2.37
+[42C[m[1m[34mDisplay (AUO363C)[m: [m1366x768 @ 60 Hz in 14" [Built-in]
+[42C[m[1m[34mWM[m: [mKWin (X11)
+[42C[m[1m[34mWM Theme[m: [mBreeze
+[42C[m[1m[34mCursor[m: [mAdwaita
+[42C[m[1m[34mTerminal[m: [mqmlkonsole
+[42C[m[1m[34mCPU[m: [mIntel(R) Core(TM) i5-3230M (4) @ 3.20 GHz
+[42C[m[1m[34mGPU[m: [mIntel 3rd Gen Core processor Graphics Controller @ 1.10 GHz [Integrated]
+[42C[m[1m[34mMemory[m: [m3.05 GiB / 11.49 GiB ([32m27%[m)
+[42C[m[1m[34mSwap[m: [m0 B / 8.00 GiB ([32m0%[m)
+[42C[m[1m[34mDisk (]8;;file:///\/]8;;\)[m: [m68.22 GiB / 117.66 GiB ([93m58%[m) - btrfs
+[42C[m[1m[34mLocal IP (wlp3s0)[m: [m192.168.1.18/24
+[42C[m[1m[34mBattery (45N1015)[m: [m[93m42%[m [Discharging]
+[42C[m[1m[34mLocale[m: [mid_ID.UTF-8
+[42C
+[42C[m[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m
+[42C[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m
+[?7h
+Read-only File Systems:
+  All file systems are writable
+
+Mounted File Systems:
+/dev/sda3                                         on  /                                           type  btrfs            (rw,relatime,seclabel,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=257,subvol=/root)
+devtmpfs                                          on  /dev                                        type  devtmpfs         (rw,nosuid,seclabel,size=6005488k,nr_inodes=1501372,mode=755,inode64)
+tmpfs                                             on  /dev/shm                                    type  tmpfs            (rw,nosuid,nodev,seclabel,inode64)
+devpts                                            on  /dev/pts                                    type  devpts           (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=000)
+sysfs                                             on  /sys                                        type  sysfs            (rw,nosuid,nodev,noexec,relatime,seclabel)
+securityfs                                        on  /sys/kernel/security                        type  securityfs       (rw,nosuid,nodev,noexec,relatime)
+cgroup2                                           on  /sys/fs/cgroup                              type  cgroup2          (rw,nosuid,nodev,noexec,relatime,seclabel,nsdelegate,memory_recursiveprot)
+none                                              on  /sys/fs/pstore                              type  pstore           (rw,nosuid,nodev,noexec,relatime,seclabel)
+efivarfs                                          on  /sys/firmware/efi/efivars                   type  efivarfs         (rw,nosuid,nodev,noexec,relatime)
+bpf                                               on  /sys/fs/bpf                                 type  bpf              (rw,nosuid,nodev,noexec,relatime,mode=700)
+configfs                                          on  /sys/kernel/config                          type  configfs         (rw,nosuid,nodev,noexec,relatime)
+proc                                              on  /proc                                       type  proc             (rw,nosuid,nodev,noexec,relatime)
+tmpfs                                             on  /run                                        type  tmpfs            (rw,nosuid,nodev,seclabel,size=2410560k,nr_inodes=819200,mode=755,inode64)
+selinuxfs                                         on  /sys/fs/selinux                             type  selinuxfs        (rw,nosuid,noexec,relatime)
+systemd-1                                         on  /proc/sys/fs/binfmt_misc                    type  autofs           (rw,relatime,fd=33,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=6515)
+debugfs                                           on  /sys/kernel/debug                           type  debugfs          (rw,nosuid,nodev,noexec,relatime,seclabel)
+binder                                            on  /dev/binderfs                               type  binder           (rw,relatime,max=1048576)
+hugetlbfs                                         on  /dev/hugepages                              type  hugetlbfs        (rw,nosuid,nodev,relatime,seclabel,pagesize=2M)
+mqueue                                            on  /dev/mqueue                                 type  mqueue           (rw,nosuid,nodev,noexec,relatime,seclabel)
+tracefs                                           on  /sys/kernel/tracing                         type  tracefs          (rw,nosuid,nodev,noexec,relatime,seclabel)
+tmpfs                                             on  /run/credentials/systemd-journald.service   type  tmpfs            (ro,nosuid,nodev,noexec,relatime,nosymfollow,seclabel,size=1024k,nr_inodes=1024,mode=700,inode64,noswap)
+fusectl                                           on  /sys/fs/fuse/connections                    type  fusectl          (rw,nosuid,nodev,noexec,relatime)
+/dev/sda3                                         on  /home                                       type  btrfs            (rw,relatime,seclabel,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/home)
+tmpfs                                             on  /tmp                                        type  tmpfs            (rw,nosuid,nodev,seclabel,size=6026396k,nr_inodes=1048576,inode64)
+/dev/sda2                                         on  /boot                                       type  ext4             (rw,relatime,seclabel)
+/var/lib/snapd/snaps/bare_5.snap                  on  /var/lib/snapd/snap/bare/5                  type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/core18_2887.snap             on  /var/lib/snapd/snap/core18/2887             type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/core_17210.snap              on  /var/lib/snapd/snap/core/17210              type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/core_17212.snap              on  /var/lib/snapd/snap/core/17212              type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/core22_2010.snap             on  /var/lib/snapd/snap/core22/2010             type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/core20_2599.snap             on  /var/lib/snapd/snap/core20/2599             type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/core24_1006.snap             on  /var/lib/snapd/snap/core24/1006             type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/easy-disk-cleaner_48.snap    on  /var/lib/snapd/snap/easy-disk-cleaner/48    type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/gnome-3-28-1804_198.snap     on  /var/lib/snapd/snap/gnome-3-28-1804/198     type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/gnome-42-2204_202.snap       on  /var/lib/snapd/snap/gnome-42-2204/202       type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/gtk-common-themes_1535.snap  on  /var/lib/snapd/snap/gtk-common-themes/1535  type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/gnome-46-2404_90.snap        on  /var/lib/snapd/snap/gnome-46-2404/90        type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/mesa-2404_887.snap           on  /var/lib/snapd/snap/mesa-2404/887           type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/openbabel_27.snap            on  /var/lib/snapd/snap/openbabel/27            type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/snapd_24718.snap             on  /var/lib/snapd/snap/snapd/24718             type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/ngrok_280.snap               on  /var/lib/snapd/snap/ngrok/280               type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/ppsspp-emu_11.snap           on  /var/lib/snapd/snap/ppsspp-emu/11           type  squashfs         (ro,nodev,relatime,context=system_u:object_r:snappy_snap_t:s0,errors=continue,x-gdu.hide,x-gvfs-hide)
+/dev/sda1                                         on  /boot/efi                                   type  vfat             (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro)
+binfmt_misc                                       on  /proc/sys/fs/binfmt_misc                    type  binfmt_misc      (rw,nosuid,nodev,noexec,relatime)
+tmpfs                                             on  /run/credentials/systemd-resolved.service   type  tmpfs            (ro,nosuid,nodev,noexec,relatime,nosymfollow,seclabel,size=1024k,nr_inodes=1024,mode=700,inode64,noswap)
+sunrpc                                            on  /var/lib/nfs/rpc_pipefs                     type  rpc_pipefs       (rw,relatime)
+tmpfs                                             on  /run/user/1000                              type  tmpfs            (rw,nosuid,nodev,relatime,seclabel,size=1205276k,nr_inodes=301319,mode=700,uid=1000,gid=1000,inode64)
+gvfsd-fuse                                        on  /run/user/1000/gvfs                         type  fuse.gvfsd-fuse  (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+portal                                            on  /run/user/1000/doc                          type  fuse.portal      (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+tmpfs                                             on  /run/user/0                                 type  tmpfs            (rw,nosuid,nodev,relatime,seclabel,size=1205276k,nr_inodes=301319,mode=700,inode64)
+
+Disk Usage (0-85%=[32mOK/HEALTHY[0m, 85-95%=[33mWARNING[0m, 95-100%=[31mCRITICAL[0m):
+/dev/sda3 /  60%  [32mOK/HEALTHY[0m
+efivarfs /sys/firmware/efi/efivars  39%  [32mOK/HEALTHY[0m
+/dev/sda3 /home  60%  [32mOK/HEALTHY[0m
+/dev/sda2 /boot  41%  [32mOK/HEALTHY[0m
+/dev/sda1 /boot/efi  4%  [32mOK/HEALTHY[0m
+
+Zombie Processes:
+  No zombie processes found.
+
+INode Usage (0-85%=[32mOK/HEALTHY[0m, 85-95%=[33mWARNING[0m, 95-100%=[31mCRITICAL[0m):
+/dev/sda3 /  -% (Unavailable or Btrfs subvolume)
+devtmpfs /dev  1%  [32mOK/HEALTHY[0m
+tmpfs /dev/shm  1%  [32mOK/HEALTHY[0m
+efivarfs /sys/firmware/efi/efivars  -% (Unavailable or Btrfs subvolume)
+tmpfs /run  1%  [32mOK/HEALTHY[0m
+tmpfs /run/credentials/systemd-journald.service  1%  [32mOK/HEALTHY[0m
+/dev/sda3 /home  -% (Unavailable or Btrfs subvolume)
+tmpfs /tmp  1%  [32mOK/HEALTHY[0m
+/dev/sda2 /boot  1%  [32mOK/HEALTHY[0m
+/dev/sda1 /boot/efi  -% (Skipped: vfat has no valid inode info)
+tmpfs /run/credentials/systemd-resolved.service  1%  [32mOK/HEALTHY[0m
+tmpfs /run/user/1000  1%  [32mOK/HEALTHY[0m
+tmpfs /run/user/0  1%  [32mOK/HEALTHY[0m
+
+SWAP Usage:
+  Total Swap: 8.00 GiB
+  Swap Free : 8.00 GiB
+
+CPU Utilization:
+16:56:37     all   21,30    0,00    4,26    0,00    0,50    0,00    0,00    0,00    0,00   73,93
+Rata-rata:   all   21,30    0,00    4,26    0,00    0,50    0,00    0,00    0,00    0,00   73,93
+
+Load Average:
+  1,68, 1,49, 1,13
+
+Recent Reboot Events:
+reboot   system boot  6.15.4-200.fc42. Sun Jun 29 16:33   still running
+reboot   system boot  6.15.4-200.fc42. Sun Jun 29 14:28 - 14:31  (00:02)
+reboot   system boot  6.15.4-200.fc42. Sun Jun 29 13:56 - 14:28  (00:31)
+
+Recent Shutdown Events:
+shutdown system down  6.15.4-200.fc42. Sun Jun 29 14:31 - 16:33  (02:01)
+shutdown system down  6.15.4-200.fc42. Sun Jun 29 14:28 - 14:28  (00:00)
+shutdown system down  6.15.4-200.fc42. Sun Jun 29 13:56 - 13:56  (00:00)
+
+Top 5 Memory-Consuming Processes:
+%MEM     PID    PPID USER     STAT COMMAND
+ 5.8    6158    5974 bima     Sl   /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:51282 -prefMapHandle 1:273414 -jsInitHandle 2:242716 -parentBuildID 20250619215142 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {a70ccc7f-eb94-4b38-b83e-7307eb50fc50} -parentPid 5974 -crashReporter 6 -crashHelperPid 5999 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 4 tab
+ 4.7    5974    2189 bima     Ssl  /usr/lib64/firefox/firefox
+ 3.1    2524    2189 bima     Ssl  /usr/bin/plasmashell --no-respawn
+ 2.4    6251    5974 bima     Sl   /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:44162 -prefMapHandle 1:273414 -jsInitHandle 2:242716 -parentBuildID 20250619215142 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {6e7cef4e-2e02-469b-9c09-1467568e25cc} -parentPid 5974 -crashReporter 6 -crashHelperPid 5999 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 6 tab
+ 2.3    6253    5974 bima     Sl   /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:44162 -prefMapHandle 1:273414 -jsInitHandle 2:242716 -parentBuildID 20250619215142 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {60fb42c8-b422-4e90-b38d-4442d32e02da} -parentPid 5974 -crashReporter 6 -crashHelperPid 5999 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 7 tab
+
+Top 5 CPU-Consuming Processes:
+%CPU     PID    PPID USER     STAT COMMAND
+ 100    7415    7295 root     R+   ps -eo pcpu,pid,ppid,user,stat,args --sort=-pcpu
+98.9    7153    7028 root     R+   dnf check
+31.3    5974    2189 bima     Ssl  /usr/lib64/firefox/firefox
+15.2    6251    5974 bima     Sl   /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:44162 -prefMapHandle 1:273414 -jsInitHandle 2:242716 -parentBuildID 20250619215142 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {6e7cef4e-2e02-469b-9c09-1467568e25cc} -parentPid 5974 -crashReporter 6 -crashHelperPid 5999 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 6 tab
+ 9.2    6158    5974 bima     Sl   /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:51282 -prefMapHandle 1:273414 -jsInitHandle 2:242716 -parentBuildID 20250619215142 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {a70ccc7f-eb94-4b38-b83e-7307eb50fc50} -parentPid 5974 -crashReporter 6 -crashHelperPid 5999 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 4 tab
+
+Broken Packages (DNF):
+  No broken packages detected.
+
+Broken Permissions (Expected: root owned, 755/700):
+
+NOTE: Some fields may be blank or NA if unsupported by the system.
+
+Hardware Information:
+
+CPU Info:
+Architecture:                            x86_64
+Model name:                              Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+Socket(s):                               1
+
+Memory Info:
+               total        used        free      shared  buff/cache   available
+Mem:            11Gi       2,9Gi       4,2Gi       173Mi       4,8Gi       8,6Gi
+  RAM Total : 11770 MB
+  SWAP Total: 8191 MB
+
+Disk Info:
+NAME     SIZE TYPE MOUNTPOINT
+sda    119,2G disk 
+├─sda1   600M part /boot/efi
+├─sda2     1G part /boot
+└─sda3 117,7G part /home
+sr0     1024M rom  
+zram0      8G disk [SWAP]
+
+GPU Info:
+00:02.0 VGA compatible controller: Intel Corporation 3rd Gen Core processor Graphics Controller (rev 09)
+
+Network Interfaces:
+lo UNKNOWN 00:00:00:00:00:00
+enp0s25 DOWN 28:d2:44:07:b4:19
+wlp3s0 UP de:48:b2:2f:c2:05
+
+Battery Health Check:
+Checking Battery Info...
+  Using UPower at: /org/freedesktop/UPower/devices/battery_BAT0
+  Status   : discharging
+  Capacity : 82%
+  Health   : 82%
+  Battery Health Status: [33mGood - Some Wear[0m
+
+Disk SMART Health Check:
+  Checking /dev/sda...
+SMART overall-health self-assessment test result: PASSED
+
+Fan Health Check:
+status:		enabled
+speed:		5870
+level:		disengaged
+commands:	level <level> (<level> is 0-7, auto, disengaged, full-speed)
+commands:	enable, disable
+commands:	watchdog <timeout> (<timeout> is 0 (off), 1-120 (seconds))
+
+Script done on 2025-06-29 16:57:36+07:00 [COMMAND_EXIT_CODE="0"]
