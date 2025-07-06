@@ -49,6 +49,9 @@ sudo dnf install -y \
   util-linux-script \
   aha \
   wkhtmltopdf
+
+sudo dnf install sysstat fastfetch smartmontools upower pciutils iproute mailx
+
 ```
 
 ### 3. Jalankan skrip:
