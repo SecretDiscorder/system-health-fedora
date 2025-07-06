@@ -50,7 +50,7 @@ sudo dnf install -y \
   aha \
   wkhtmltopdf
 
-sudo dnf install sysstat fastfetch smartmontools upower pciutils iproute mailx
+sudo dnf install sysstat fastfetch smartmontools upower pciutils iproute mailx lm_sensors btrfs-progs xfsprogs e2fsprogs acpi cpupower
 
 ```
 
