@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Author : Sadashiva Murthy M  | https://www.simplylinuxfaq.com
-# GitHub  : https://github.com/SimplyLinuxFAQ/health-check-script
-# Updated : 9 September 2024
-# Modified: Enhanced by ChatGPT - 29 Juni 2025
-
 S="************************************"
 D="-------------------------------------"
 COLOR="y"
@@ -20,8 +15,7 @@ else
   CCOLOR="CRITICAL"
 fi
 
-# Output Header
-clear
+
 echo -e "$S"
 echo -e "        System Health Status"
 echo -e "$S"
@@ -325,3 +319,145 @@ elif [ -d /sys/class/hwmon ]; then
 else
   echo "  Fan information not available on this system."
 fi
+
+echo "=== Zero Error System Check ==="
+echo ""
+
+# 1. Boot log errors
+echo "[1] Log error boot saat ini:"
+sudo journalctl -p err..alert -b | grep -v bpf-restrict-fs | grep -v FileManager1 | grep -v osnoise
+echo ""
+
+# 2. Systemd failed service
+echo "[2] Service systemd yang gagal:"
+sudo systemctl --failed
+echo ""
+
+# 3. Kernel dmesg error
+echo "[3] Error kernel (dmesg):"
+sudo dmesg --level=err,crit,emerg
+echo ""
+
+# 4. Log audit/SELinux (jika aktif)
+echo "[4] Log audit/SELinux (opsional):"
+sudo journalctl -t audit | grep -i denied
+echo ""
+
+# 5. Cek log umum: error, fail, denied
+echo "[5] Grep error umum:"
+echo -e "\\n${YELLOW}[5] Grep error umum:${NC}"
+journalctl -b --no-pager | grep -iE "error|fail|invalid|denied" | grep -vE "kioworker|wpad-detector|oom-notifier|plasma-session-shortcuts|snap-device-helper|Bluetooth|Couldnt parse dbx"
+
+
+# Ring Summary with Clean Visual and Bigger Center Font
+
+echo -e "\n\e[1mSystem Health Summary (Visual Ring)\e[0m"
+
+# Warna untuk output
+GREEN='\e[1;32m'
+YELLOW='\e[1;33m'
+RED='\e[1;31m'
+BLUE='\e[1;34m'
+NC='\e[0m' # No Color
+COLOR=$GREEN
+
+# Skor awal
+SCORE=100
+
+# Ring ASCII
+RING=("○" "○" "○" "○" "○" "○" "○")
+GCOLOR=$GREEN
+WCOLOR=$YELLOW
+CCOLOR=$RED
+
+# Fungsi untuk visualisasi ring
+draw_ring() {
+  local percent=$1
+  local -n ref=$2
+
+  local filled=$(( percent / 14 ))
+
+  for ((i=0;i<7;i++)); do
+    if (( i < filled )); then
+      if (( percent >= 80 )); then
+        ref[$i]="${GCOLOR}●${NC}"
+      elif (( percent >= 60 )); then
+        ref[$i]="${WCOLOR}●${NC}"
+      else
+        ref[$i]="${CCOLOR}●${NC}"
+      fi
+    else
+      ref[$i]="${NC}○${NC}"
+    fi
+  done
+}
+
+
+# Header
+echo -e "$BLUE************************************$NC"
+echo -e "        ${BLUE}System Health Status${NC}"
+echo -e "$BLUE************************************$NC"
+echo -e "Hostname : $(hostname -f 2>/dev/null || hostname -s)"
+echo -e "Operating System : $(. /etc/os-release && echo \"$NAME $VERSION\")"
+echo -e "Kernel Version : $(uname -r)"
+echo -en "OS Architecture : " && (arch | grep -q x86_64 && echo "64 Bit OS" || echo "32 Bit OS")
+echo -e "System Uptime : $(uptime -p)"
+echo -e "Current System Date & Time : $(date '+%a %d %b %Y %T')"
+
+# Fastfetch (optional)
+command -v fastfetch >/dev/null && fastfetch
+
+# Tambahan Hardware Summary dari fastfetch jika tersedia
+command -v fastfetch >/dev/null || {
+  echo -e "\n${BLUE}Hardware Summary:${NC}"
+  echo -e "CPU: $(lscpu | grep 'Model name' | sed 's/Model name:\s*//')"
+  echo -e "Memory: $(free -h | awk '/Mem:/ {print $3 "/" $2}')"
+  echo -e "Swap: $(free -h | awk '/Swap:/ {print $3 "/" $2}')"
+  echo -e "Disk (/): $(df -h / | awk 'NR==2 {print $3 "/" $2 " (" $5 ")"}')"
+  echo -e "Battery: $(upower -d 2>/dev/null | grep -E 'percentage|state' | xargs)"
+}
+
+# Penyesuaian skor berdasarkan keseluruhan sistem (tidak hanya log)
+
+# Error count dari log (log dianggap aman jika < 200)
+ERR_COUNT=$(journalctl -b -p err..alert | wc -l)
+(( ERR_COUNT >= 200 )) && SCORE=$(( SCORE - 20 ))
+
+# Disk usage
+DISK_USAGE=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+(( DISK_USAGE > 95 )) && SCORE=$(( SCORE - 15 ))
+(( DISK_USAGE > 90 && DISK_USAGE <= 95 )) && SCORE=$(( SCORE - 10 ))
+(( DISK_USAGE > 85 && DISK_USAGE <= 90 )) && SCORE=$(( SCORE - 5 ))
+
+# Zombie process
+ZOMBIE=$(ps -eo stat | grep -c '^Z')
+(( ZOMBIE > 0 )) && SCORE=$(( SCORE - 5 ))
+
+# Swap terlalu kecil
+SWAP_FREE=$(awk '/SwapFree/ { print int($2) }' /proc/meminfo)
+(( SWAP_FREE < 102400 )) && SCORE=$(( SCORE - 5 ))  # <100MB swap
+
+# Load average
+CPU_LOAD=$(uptime | awk -F 'load average:' '{ print $2 }' | cut -d',' -f1 | sed 's/ //g')
+CPU_INT=${CPU_LOAD%.*}
+(( CPU_INT > 3 )) && SCORE=$(( SCORE - 5 ))
+
+# Clamp
+(( SCORE < 0 )) && SCORE=0
+(( SCORE > 100 )) && SCORE=100
+
+# Visual Ring
+draw_ring $SCORE RING
+
+# Ring Output
+echo -e "\nSystem Health Summary (Visual Ring)"
+echo -e "   ${RING[0]}   ${RING[1]}   ${RING[2]}"
+echo -e "  ${RING[3]}   $SCORE% ${RING[4]}"
+echo -e "   ${RING[5]}   ${RING[6]}"
+
+# Kesimpulan
+echo -e "\n     ${COLOR}System Health Score: ${SCORE}%${NC}\n"
+echo "=== Selesai ==="
+mail -H 2>/dev/null && echo "Anda memiliki surat baru dalam /var/spool/mail/\$USER"
+
+exit 0
